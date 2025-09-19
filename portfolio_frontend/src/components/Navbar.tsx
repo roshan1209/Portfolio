@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/context/ThemeContext"
-import { Moon, Sun, Menu, X } from "lucide-react"
+import { Moon, Sun, Menu, X, Download } from "lucide-react"
 import { useState } from "react"
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme()
   const [open, setOpen] = useState(false)
+  const resumeUrl =
+    (import.meta as any).env?.VITE_RESUME_URL ||
+    "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
   const close = () => setOpen(false)
   return (
     <nav className="w-full sticky top-0 z-50 bg-background/80 backdrop-blur border-b">
@@ -28,6 +31,14 @@ const Navbar = () => {
           </Button>
           <Button asChild variant="ghost">
             <a href="#contact" onClick={close}>Contact</a>
+          </Button>
+          <Button asChild>
+            <a href={resumeUrl} target="_blank" rel="noopener noreferrer" download>
+              <span className="inline-flex items-center gap-2">
+                <Download className="size-4" />
+                Resume
+              </span>
+            </a>
           </Button>
           <Button variant="outline" onClick={toggleTheme} aria-label="Toggle theme">
             {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
@@ -52,6 +63,14 @@ const Navbar = () => {
             </Button>
             <Button asChild variant="ghost" className="justify-start" onClick={close}>
               <a href="#contact">Contact</a>
+            </Button>
+            <Button asChild className="justify-start" onClick={close}>
+              <a href={resumeUrl} target="_blank" rel="noopener noreferrer" download>
+                <span className="inline-flex items-center gap-2">
+                  <Download className="size-4" />
+                  Resume
+                </span>
+              </a>
             </Button>
             <Button variant="outline" onClick={() => { toggleTheme(); close(); }} aria-label="Toggle theme" className="justify-start">
               {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
