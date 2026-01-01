@@ -31,7 +31,7 @@ const TimelineRow = ({
     <div className="flex flex-col gap-0.5 pt-1">
       <p className="text-lg font-semibold">{title}</p>
       <p className="text-base text-muted-foreground">{org}</p>
-      <p className="text-sm text-muted-foreground/70">{period}</p>
+      <p className="text-sm text-muted-foreground/90">{period}</p>
     </div>
   </div>
 )

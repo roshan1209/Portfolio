@@ -33,7 +33,7 @@ const About = () => {
                   Driven by a passion for innovation and a commitment to excellence, I specialize in full-stack development, creating robust and scalable web applications. My expertise spans React, Next.js, and Node.js, enabling me to deliver high-quality solutions tailored to unique business needs.
                 </p>
               </div>
-              <Button asChild className="w-fit bg-[var(--primary-color,#3b82f6)] hover:bg-[color-mix(in_oklab,var(--primary-color,#3b82f6)_90%,black)]">
+              <Button asChild className="h-12 w-fit px-6 bg-blue-700 text-white shadow-lg hover:bg-[var(--accent-color)]/90 transition-all duration-300">
                 <a href="#projects">View Projects</a>
               </Button>
             </div>

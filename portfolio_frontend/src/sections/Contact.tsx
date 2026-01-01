@@ -101,7 +101,7 @@ const Contact = () => {
             <a className="text-muted-foreground hover:text-primary text-base font-normal transition-colors" href="#projects">Projects</a>
             <a className="text-muted-foreground hover:text-primary text-base font-normal transition-colors" href="#contact">Contact</a>
           </div>
-          <p className="text-muted-foreground/70 text-sm">© 2025 Roshan Britto. All rights reserved.</p>
+          <p className="text-muted-foreground/90 text-sm">© 2025 Roshan Britto. All rights reserved.</p>
         </footer>
       </div>
     </section>
