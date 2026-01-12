@@ -135,20 +135,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/* Animations */}
-        <style>
-          {`
-          @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(4px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-          @keyframes fadeLeft {
-            from { opacity: 0; transform: translateX(-32px); }
-            to { opacity: 1; transform: translateX(0); }
-          }
-        `}
-        </style>
       </section>
   )
 }

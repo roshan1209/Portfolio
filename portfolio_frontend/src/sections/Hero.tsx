@@ -66,26 +66,6 @@ const Hero = () => {
               className="rounded-xl w-full max-w-md shadow-xl border border-border"
           />
         </div>
-
-        {/* Custom Animations */}
-        <style>
-          {`
-          @keyframes fadeSlideUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-
-          @keyframes fadeSlideRight {
-            from { opacity: 0; transform: translateX(24px); }
-            to { opacity: 1; transform: translateX(0); }
-          }
-
-          @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-          }
-        `}
-        </style>
       </section>
   );
 };
