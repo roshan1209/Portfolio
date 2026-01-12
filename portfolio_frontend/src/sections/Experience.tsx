@@ -44,13 +44,13 @@ const Experience = () => {
           <section>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Experience</h2>
             <Timeline>
-              {/*<TimelineRow*/}
-              {/*  logo="./logo/dark.png"*/}
-              {/*  title="Freelancer"*/}
-              {/*  org=""*/}
-              {/*  period="Jul 2025 - Present"*/}
-              {/*  ringColor="bg-primary/90 ring-2 ring-primary"*/}
-              {/*/>*/}
+              <TimelineRow
+                logo="./logo/dark.png"
+                title="Freelancer"
+                org=""
+                period="Jul 2025 - Present"
+                ringColor="bg-primary/90 ring-2 ring-primary"
+              />
               <TimelineRow
                 logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeC3M0mM1Btyx0tz68RyEytnDB0E7OVFNeFAidfrq5Kd6s51rhB8IG-9JGYVXMGKzgFFc&usqp=CAU"
                 title="Software Engineer"

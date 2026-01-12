@@ -6,75 +6,89 @@ const Contact = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
-  const TO_EMAIL = import.meta.env.VITE_CONTACT_EMAIL || ""
+  const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || ""
   const GITHUB_URL = import.meta.env.VITE_GITHUB_URL || "#"
   const LINKEDIN_URL = import.meta.env.VITE_LINKEDIN_URL || "#"
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(`New message from ${name || 'Portfolio'}`)
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
-    const mailto = `mailto:${TO_EMAIL}?subject=${subject}&body=${body}`
-    if (!TO_EMAIL) {
-      console.warn('VITE_CONTACT_EMAIL is not set. Opening mail client without recipient.')
+
+    if (!WHATSAPP_NUMBER) {
+      console.warn("VITE_WHATSAPP_NUMBER is not set")
+      return
     }
-    window.location.href = mailto
+
+    const text = encodeURIComponent(
+        `Hi Roshan \n\n` +
+        `Name: ${name}\n` +
+        `Email: ${email}\n\n` +
+        `Message:\n${message}`
+    )
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`
+    window.open(whatsappUrl, "_blank")
   }
 
   return (
-    <section id="contact" className="px-4 md:px-10 lg:px-20 xl:px-40 flex justify-center py-24">
-      <div className="w-full max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Let’s build something amazing together.</h2>
-          <p className="text-lg text-muted-foreground">I'm always open to discussing new projects and opportunities.</p>
-        </div>
+      <section id="contact" className="px-4 md:px-10 lg:px-20 xl:px-40 flex justify-center py-24">
+        <div className="w-full max-w-4xl">
 
-        <div className="bg-card border border-border rounded-xl p-8 md:p-12 w-full">
-          <form className="space-y-6" onSubmit={onSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+              Let’s build something amazing together.
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              I'm always open to discussing new projects and opportunities.
+            </p>
+          </div>
+
+          {/* Form */}
+          <div className="bg-card border border-border rounded-xl p-8 md:p-12 w-full">
+            <form className="space-y-6" onSubmit={onSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <input
+                      type="text"
+                      placeholder="Your Name"
+                      className="form-input block w-full rounded-lg border-input bg-background h-12 px-4"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <input
+                      type="email"
+                      placeholder="Your Email"
+                      className="form-input block w-full rounded-lg border-input bg-background h-12 px-4"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                  />
+                </div>
+              </div>
+
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Your Name"
-                  className="form-input block w-full rounded-lg border-input bg-background focus:border-ring focus:ring-ring placeholder-muted-foreground h-12 px-4"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
+                <label className="block text-sm font-medium mb-2">Message</label>
+                <textarea
+                    placeholder="Your Message"
+                    className="form-textarea block w-full rounded-lg border-input bg-background min-h-[160px] p-4"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
                 />
               </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Your Email"
-                  className="form-input block w-full rounded-lg border-input bg-background focus:border-ring focus:ring-ring placeholder-muted-foreground h-12 px-4"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
+
+              <div className="flex justify-center pt-4">
+                <Button type="submit" className="h-12 px-8">
+                  Send via WhatsApp
+                </Button>
               </div>
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-              <textarea
-                id="message"
-                placeholder="Your Message"
-                className="form-textarea block w-full rounded-lg border-input bg-background focus:border-ring focus:ring-ring placeholder-muted-foreground min-h-[160px] p-4"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-              />
-            </div>
-            <div className="flex justify-center pt-4">
-              <Button type="submit" className="h-12 px-8">
-                <span className="truncate">Send Message</span>
-              </Button>
-            </div>
-          </form>
-        </div>
+            </form>
+          </div>
 
         <div className="flex justify-center items-center gap-6 mt-12">
           <a className="group flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors" href={GITHUB_URL} target="_blank" rel="noreferrer" aria-label="GitHub profile">
