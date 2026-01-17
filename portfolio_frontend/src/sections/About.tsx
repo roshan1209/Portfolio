@@ -14,6 +14,8 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiExpress,
+  SiFirebase,
+  SiPostgresql
 } from "react-icons/si"
 import {
   DiMysql,
@@ -21,6 +23,7 @@ import {
   DiDocker,
   DiGithub,
 } from "react-icons/di"
+import { FaLaravel, FaPhp } from "react-icons/fa6"
 import { TbBrandReactNative } from "react-icons/tb"
 import React from "react";
 
@@ -135,8 +138,11 @@ const About = () => {
                   Backend
                 </h3>
                 <div className="flex flex-wrap gap-4">
-                  <TechBadge icon={<FaNodeJs />} label="Node.js" />
-                  <TechBadge icon={<SiExpress />} label="Express.js" />
+                    <TechBadge icon={<FaNodeJs />} label="Node.js" />
+                    <TechBadge icon={<SiExpress />} label="Express.js" />
+                    <TechBadge icon={<FaLaravel />} label="Laravel" />
+                    <TechBadge icon={<FaPhp />} label="PHP" />
+                    <TechBadge icon={<SiFirebase />} label="Firebase" />
                 </div>
               </div>
 
@@ -146,11 +152,12 @@ const About = () => {
                   Database & DevOps
                 </h3>
                 <div className="flex flex-wrap gap-4">
-                  <TechBadge icon={<DiMysql />} label="MySQL" />
-                  <TechBadge icon={<DiMongodb />} label="MongoDB" />
-                  <TechBadge icon={<DiDocker />} label="Docker" />
-                  <TechBadge icon={<DiGithub />} label="GitHub" />
-                  <TechBadge icon={<RiVercelLine />} label="Vercel" />
+                    <TechBadge icon={<DiMysql />} label="MySQL" />
+                    <TechBadge icon={<SiPostgresql />} label="PostgreSQL" />
+                    <TechBadge icon={<DiMongodb />} label="MongoDB" />
+                    <TechBadge icon={<DiDocker />} label="Docker" />
+                    <TechBadge icon={<DiGithub />} label="GitHub" />
+                    <TechBadge icon={<RiVercelLine />} label="Vercel" />
                 </div>
               </div>
             </div>

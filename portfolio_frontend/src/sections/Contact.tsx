@@ -114,7 +114,7 @@ const Contact = () => {
                 <div className="flex flex-col">
                   <span className="text-sm font-medium">WhatsApp</span>
                   <span className="text-sm text-muted-foreground">
-          +{WHATSAPP_NUMBER}
+          {WHATSAPP_NUMBER}
         </span>
                 </div>
               </a>
