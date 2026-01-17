@@ -74,7 +74,7 @@ const Navbar = () => {
             </Button>
             <Button variant="outline" onClick={() => { toggleTheme(); close(); }} aria-label="Toggle theme" className="justify-start">
               {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
-              <span className="ml-2">Toggle theme</span>
+              <span className="ml-2">Theme</span>
             </Button>
           </div>
         </div>
