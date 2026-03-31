@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Client Management System",
+    "description": "A full-stack CRM system for managing clients, roles, and business operations with analytics dashboard.",
+    "image": "/images/crm.png",
+    "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Chart.js", "Node.js", "Express.js", "PostgreSQL"],
+    "demo": "",
+    "details": "Developed a scalable Client Management System with role-based access control for admins and users. Implemented features such as client onboarding, task tracking, and performance analytics. Built RESTful APIs using Node.js and Express, and used MongoDB for efficient data handling. Integrated Chart.js for real-time data visualization and dashboards."
+  },
+  {
+    "title": "E-commerce Shop",
+    "description": "A modern e-commerce platform with product browsing, cart functionality, and responsive UI.",
+    "image": "/images/e-shop.png",
+    "tech": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "demo": "https://e-shop-portfolio.vercel.app/",
+    "details": "Built a responsive e-commerce application with product listings, category filtering, and shopping cart functionality. Implemented optimized UI using Tailwind CSS and server-side rendering with Next.js for improved performance and SEO. Focused on clean UX and fast navigation."
+  },
+  {
+    "title": "School Website",
+    "description": "A dynamic school management website with content management and secure contact features.",
+    "image": "/images/school.png",
+    "tech": ["React", "TypeScript", "Tailwind CSS", "Cloudinary", "Whatsapp API"],
+    "demo": "https://www.stjohnpeterschool.com",
+    "details": "Developed a fully responsive school website with modules for infrastructure, curriculum, achievements, and announcements. Integrated Cloudinary for media handling and MongoDB for backend data storage. Built a secure contact form and admin panel for content updates."
+  },
+  {
+    "title": "YouTube Channel Site",
+    "description": "A modern landing page designed to showcase a YouTube channel with videos and audience engagement features.",
+    "image": "/images/youtube.png",
+    "tech": ["React", "Tailwind CSS", "Material UI"],
+    "demo": "https://tech-triples.vercel.app/",
+    "details": "Designed and developed a responsive landing page for a YouTube channel to showcase featured videos, playlists, and content categories. Implemented dynamic video sections, search functionality, and category-based navigation. Focused on clean UI/UX and responsive design to improve user engagement and content discoverability."
+  },
+  {
+    "title": "Gym Website",
+    "description": "A modern fitness platform showcasing interactive animations, trainer profiles, pricing plans, and user-friendly membership features.",
+    "image": "/images/gym.png",
+    "tech": ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "demo": "https://gym-site-plum.vercel.app/",
+    "details": "Designed a visually engaging gym website with smooth animations using Framer Motion. Included sections for training programs, pricing plans, trainers, and membership signup. Focused on responsive design and interactive UI to improve user engagement."
+  },
+  {
+    "title": "Construction Website",
+    "description": "A professional corporate website for showcasing construction services and projects.",
+    "image": "/images/construction.png",
+    "tech": ["React", "TypeScript", "Tailwind CSS", "GSAP"],
+    "demo": "https://construction-site-swart.vercel.app/",
+    "details": "Developed a modern construction company website with smooth scrolling and animation effects using GSAP. Included project showcases, services, testimonials, and company overview. Focused on strong branding and industrial-style UI design."
+  },
+  {
+    "title": "Agency Landing Page",
+    "description": "A high-conversion landing page designed for digital agencies and startups.",
+    "image": "/images/agency.png",
+    "tech": ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "demo": "https://business-landing-page-design.vercel.app/",
+    "details": "Built a clean and conversion-focused landing page with sections for services, case studies, testimonials, and call-to-action. Optimized layout, typography, and spacing to improve user engagement and lead generation."
+  },
+  {
+    "title": "News App",
+    "description": "A real-time news application with category filtering and API integration.",
+    "image": "/images/news.png",
+    "tech": ["Next.js", "Tailwind CSS", "News API"],
+    "demo": "https://news-app-by-roshan.vercel.app/",
+    "details": "Developed a news application using Next.js with API integration for fetching real-time headlines. Implemented category filtering, search functionality, and responsive UI. Optimized performance using server-side rendering."
+  }
+]
